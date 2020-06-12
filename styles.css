@@ -1,9 +1,8 @@
 body {
-    background-color: #1f2833;
-    font-family: 'Merriweather', serif;
+    background-color: #ffffff;
     margin: auto;
     text-align: center;
-    font-size: 1.5em;
+    font-family: 'Merriweather', serif;
 }
 
 a:link {
@@ -26,31 +25,34 @@ div ul {
     text-align: center;
     list-style-position: inside;
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
 }
 
 hr {
     border-style: dotted none none none;
     border-color: gray;
-    border-width: 5px;
-    width: 30%;
-    padding: 10px;
+    border-width: 15px;
+    width: 4%;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 h1 {
     font-family: 'Sacramento', cursive;
-    font-size: 3em;
+    font-size: 4em;
+    color: #66fcf1;
+}
+
+h2 {
     color: #66fcf1;
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #66dbfc;
+    color: #84a9ac;
 }
 
 p,
 li {
-    color: #c5c6c7;
+    color: #1f2833;
 }
 
 li {
@@ -65,11 +67,11 @@ li {
     padding: 5px;
     color: #c5c6c7;
     background-color: #3a4c61;
-    font-family: 'Montserrat', sans-serif;
 }
 
 #div-header {
     height: 100vh;
+    background-color: #1f2833;
 }
 
 #name-header {
@@ -80,7 +82,8 @@ li {
 
 #text-header {
     margin-bottom: 0;
-    font-size: 0.7em;
+    font-size: 1em;
+    color: #84a9ac;
 }
 
 #top-cloud {
@@ -92,8 +95,8 @@ li {
 
 #bottom-cloud {
     position: absolute;
-    margin-top: -40px;
-    margin-left: -280px;
+    margin-top: -30px;
+    margin-left: -340px;
     display: inline-block;
 }
 
@@ -103,7 +106,148 @@ li {
     bottom: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .project-header {
     margin-bottom: 0;
-    color: #66dbfc;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left-project-container {
+    text-align: left;
+    line-height: 2;
+    width: 70%;
+    margin: 100px auto 100px auto;
+}
+
+.left-project-container img {
+    float: left;
+    margin-right: 5%;
+}
+
+.right-project-container {
+    text-align: left;
+    line-height: 2;
+    width: 70%;
+    margin: 100px auto 100px auto;
+}
+
+.right-project-container img {
+    float: right;
+    margin-left: 5%;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #3a4c61;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    border-color: #3a4c61;
+    width: 30%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #3a4c61;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 20%;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #3a4c61;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #3a4c61;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #3a4c61;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #3a4c61 transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 10px;
+    border: 2px solid #3a4c61;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid #3a4c61;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #3a4c61 transparent transparent;
+    }
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
 }
