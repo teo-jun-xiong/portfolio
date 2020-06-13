@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
@@ -11,7 +12,39 @@
 </head>
 
 <body>
+    <a id="scroll-top-button"></a>
+
     <div id="div-header">
+        <nav class="navbar navbar-expand-lg my-navbar navbar-dark">
+            <a class="navbar-brand" href="#div-header">
+                <img src="images/programmer.png" width="50px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class=" nav-item active">
+                        <a class="nav-link" href="#education">Education<span class="sr-only"></span></a>
+                    </li>
+                    <li class=" nav-item active">
+                        <a class="nav-link" href="#project">Projects<span class="sr-onl "></span></a>
+                    </li>
+                    <li class=" nav-item active">
+                        <a class="nav-link" href="#job-container">Job Experience<span class="sr-only"></span></a>
+                    </li>
+                    <li class=" nav-item active">
+                        <a class="nav-link" href="#skills-container">Skills<span class="sr-only"></span></a>
+                    </li>
+                    <li class=" nav-item active">
+                        <a class="nav-link" href="#links-container">Links<span class="sr-only"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <img id="top-cloud" src="images/cloud.png" width="5%">
         <h1 id="name-header">Teo Jun Xiong</h1>
         <p id="text-header">Computer Science<br>National University of Singapore</em>
@@ -23,31 +56,31 @@
     <br>
 
     <div id="education">
-        <img src="images/graduation.png" width="6%"> <br>
+        <img src="images/education.png" alt="education" width="6%"> <br><br>
 
-        <h3 class="project-header">Relevant Coursework</h3>
+        <h3 class="project-header">Relevant Coursework</h3><br>
         <p>Data Structures and Algorithms • Database Systems • Software Engineering </p>
         <p>Object-oriented Programming • Computer Networks</p><br><br>
         <div class="timeline">
-            <div class="container left">
+            <div class="timeline-container timeline-left">
                 <div class="timeline-content">
-                    <h3>2018</h3>
+                    <h3 class="project-header">2018</h3>
                     <p>National University of Singapore</p>
                 </div>
             </div>
-            <div class="container right">
+            <div class="timeline-container timeline-right">
                 <div class="timeline-content">
-                    <h3>2014</h3>
+                    <h3 class="project-header">2014</h3>
                     <p>Meridian Junior College</p>
                 </div>
             </div>
-            <div class="container left">
+            <div class="timeline-container timeline-left">
                 <div class="timeline-content">
-                    <h3>2010</h3>
+                    <h3 class="project-header">2010</h3>
                     <p>Temasek Secondary School</p>
                 </div>
             </div>
-            <div class="container right">
+            <div class="timeline-container timeline-right">
                 <div class="timeline-content">
                     <h3>2004</h3>
                     <p>Bedok Green Primary School</p>
@@ -57,8 +90,8 @@
     </div>
     <hr>
 
-    <div>
-        <img src="images/think.png" width="6%">
+    <div id="project">
+        <img src="images/project.png" width="6%">
         <div class="left-project-container">
             <img src="images/eldereach.png" width="150px">
             <h3 class="project-header">Eldereach (May - Jul 2020)</h3>
@@ -70,7 +103,7 @@
         </div>
 
         <div class="right-project-container">
-            <img src="images/male-chef.png" width="150px">
+            <img src="images/cooking-papa.png" width="150px">
             <h3 class="project-header">Cooking Papa (Jan - May 2020)</h3>
             <p>A desktop command line app developed to help university students who live alone learn how to cook. With Cooking Papa, users can easily edit recipes, keep track of ingredients they currently have at home and have a shopping list that assists
                 them in their grocery shopping process.
@@ -80,7 +113,7 @@
         </div>
 
         <div class="left-project-container">
-            <img src="images/app.png" width="150px">
+            <img src="images/spreent.png" width="150px">
             <h3 class="project-header">Spreent-bot (Jan 2020)</h3>
             <p>A Telegram bot developed to connect shoppers looking to pool their purchases in order to meet the required spending for free shipping and discounts. It allows users to create 'Spreents', indicating the amount of their items, and allows keen
                 users to join the 'Spreent'.
@@ -102,8 +135,8 @@
 
     <hr>
 
-    <div class="job-container">
-        <img src="images/portfolio.png" width="6%">
+    <div id="job-container">
+        <img src="images/job.png" width="6%">
         <h3 class="project-header">Teaching Assistant for Programming Methodology II</h3>
         <p class="job-text"><em>From Jan - May 2020.<br></em>Responsibilities include preparing lesson plans, reviewing students' code, and providing guidance for labs and assignments.</p>
         <br>
@@ -122,7 +155,7 @@
     <hr>
 
     <div id="skills-container">
-        <img src="images/code.png" width="6%" style="clear: both;"> <br><br>
+        <img src="images/skills.png" width="6%" style="clear: both;"> <br><br>
 
         <div class="scene">
             <br>
@@ -216,12 +249,17 @@
     </div>
     <hr>
 
-    <div>
+    <div id="links-container">
         <a href="mailto:teojunxiong97@gmail.com"><img class="link-image" src="images/email.png"></a>
         <a href="https://github.com/teo-jun-xiong"><img class="link-image" src="images/github.png"></a>
         <a href="https://www.linkedin.com/in/teo-jun-xiong/"><img class="link-image" src="images/linkedin.png"></a>
     </div>
     <hr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>
