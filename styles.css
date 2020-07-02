@@ -269,8 +269,8 @@ hr {
 .left-project-container {
     text-align: left;
     line-height: 2;
-    width: 70%;
-    margin: 100px auto 100px auto;
+    width: 55%;
+    margin: 50px auto 50px auto;
 }
 
 .left-project-container img {
@@ -281,8 +281,8 @@ hr {
 .right-project-container {
     text-align: left;
     line-height: 2;
-    width: 70%;
-    margin: 100px auto 100px auto;
+    width: 55%;
+    margin: 50px auto 50px auto;
 }
 
 .right-project-container img {
@@ -293,6 +293,16 @@ hr {
 .left-project-container p,
 .right-project-container p {
     overflow: hidden;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 
